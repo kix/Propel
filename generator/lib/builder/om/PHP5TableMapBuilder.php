@@ -368,6 +368,7 @@ class " . $this->getClassname() . " extends TableMap
      *
      * @param string $hookName The name of the hook as called from one of this class methods, e.g. "preSave"
      * @param string &$script  The script will be modified in this method.
+     * @param string $script
      */
     public function applyBehaviorModifier($hookName, &$script, $tab = "		")
     {

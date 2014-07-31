@@ -41,12 +41,18 @@ class SortableBehaviorQueryBuilderModifier
      */
     protected $peerClassname;
 
+    /**
+     * @param SortableBehavior $behavior
+     */
     public function __construct($behavior)
     {
         $this->behavior = $behavior;
         $this->table = $behavior->getTable();
     }
 
+    /**
+     * @param string $key
+     */
     protected function getParameter($key)
     {
         return $this->behavior->getParameter($key);
@@ -93,6 +99,9 @@ class SortableBehaviorQueryBuilderModifier
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addInList(&$script)
     {
         list($methodSignature, $paramsDoc, $buildScope) = $this->behavior->generateScopePhp();

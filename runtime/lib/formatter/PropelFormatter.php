@@ -64,6 +64,9 @@ abstract class PropelFormatter
         return $this->dbName;
     }
 
+    /**
+     * @param string $class
+     */
     public function setClass($class)
     {
         $this->class = $class;

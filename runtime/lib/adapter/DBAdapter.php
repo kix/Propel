@@ -270,7 +270,7 @@ abstract class DBAdapter
      * @param PDO    $con
      * @param string $name
      *
-     * @return mixed
+     * @return string
      */
     public function getId(PDO $con, $name = null)
     {
@@ -281,7 +281,7 @@ abstract class DBAdapter
      * Formats a temporal value before binding, given a ColumnMap object.
      *
      * @param mixed $value The temporal value
-     * @param mixed $type  PropelColumnTypes constant, or ColumnMap object
+     * @param ColumnMap $type  PropelColumnTypes constant, or ColumnMap object
      *
      * @return string The formatted temporal value
      */

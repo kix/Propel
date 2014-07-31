@@ -123,6 +123,9 @@ abstract class BookstoreNestedSetTestBase extends BookstoreTestBase
         return $ret;
     }
 
+    /**
+     * @param integer $scope
+     */
     protected function dumpTreeWithScope($scope)
     {
         $c = new Criteria();

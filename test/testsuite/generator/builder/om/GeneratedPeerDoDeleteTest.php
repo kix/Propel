@@ -506,6 +506,7 @@ class GeneratedPeerDoDeleteTest extends BookstoreEmptyTestBase
 
     /**
      * @see        testDoDeleteCompositePK()
+     * @param integer $id
      */
     private function createBookWithId($id)
     {
@@ -525,6 +526,7 @@ class GeneratedPeerDoDeleteTest extends BookstoreEmptyTestBase
 
     /**
      * @see        testDoDeleteCompositePK()
+     * @param integer $id
      */
     private function createReaderWithId($id)
     {

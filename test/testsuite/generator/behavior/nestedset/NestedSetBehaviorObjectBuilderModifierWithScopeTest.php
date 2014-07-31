@@ -20,6 +20,9 @@ require_once dirname(__FILE__) . '/../../../../tools/helpers/bookstore/behavior/
  */
 class NestedSetBehaviorObjectBuilderModifierWithScopeTest extends BookstoreNestedSetTestBase
 {
+    /**
+     * @param string $title
+     */
     protected function getByTitle($title)
     {
         $c = new Criteria();

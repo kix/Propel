@@ -417,6 +417,9 @@ class TestableTable13 extends Table13
         return parent::cleanupSlugPart($slug, $separator);
     }
 
+    /**
+     * @param string $slug
+     */
     public function makeSlugUnique($slug, $separator = '-', $increment = 0)
     {
         return parent::makeSlugUnique($slug, $separator, $increment);
@@ -458,6 +461,9 @@ class TestTableWithScope extends TableWithScope
         return parent::cleanupSlugPart($slug, $separator);
     }
 
+    /**
+     * @param string $slug
+     */
     public function makeSlugUnique($slug, $separator = '-', $increment = 0)
     {
         return parent::makeSlugUnique($slug, $separator, $increment);

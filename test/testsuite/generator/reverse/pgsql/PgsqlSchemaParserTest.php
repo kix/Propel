@@ -99,6 +99,9 @@ class PgsqlSchemaParserTest extends PHPUnit_Framework_TestCase
 
 class TestablePropelConvertConfTask extends PropelConvertConfTask
 {
+    /**
+     * @param SimpleXMLElement $xml
+     */
     public static function simpleXmlToArray($xml)
     {
         return parent::simpleXmlToArray($xml);

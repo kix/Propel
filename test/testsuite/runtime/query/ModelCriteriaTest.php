@@ -20,6 +20,9 @@ require_once dirname(__FILE__) . '/../../../tools/helpers/bookstore/BookstoreDat
  */
 class ModelCriteriaTest extends BookstoreTestBase
 {
+    /**
+     * @param string $expectedSql
+     */
     protected function assertCriteriaTranslation(Criteria $criteria, $expectedSql, $expectedParams, $message = '')
     {
         $params = array();
@@ -98,6 +101,9 @@ class ModelCriteriaTest extends BookstoreTestBase
         $this->doTestReplaceNames($c, BookPeer::getTableMap(), $origClause, $columnPhpName = false, $modifiedClause);
     }
 
+    /**
+     * @param TestableModelCriteria $c
+     */
     public function doTestReplaceNames($c, $tableMap, $origClause, $columnPhpName = false, $modifiedClause)
     {
         $c->replaceNames($origClause);

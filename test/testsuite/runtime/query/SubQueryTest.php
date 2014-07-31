@@ -20,6 +20,9 @@ require_once dirname(__FILE__) . '/../../../tools/helpers/bookstore/BookstoreDat
  */
 class SubQueryTest extends BookstoreTestBase
 {
+    /**
+     * @param string $expectedSql
+     */
     protected function assertCriteriaTranslation($criteria, $expectedSql, $expectedParams, $message = '')
     {
         $params = array();

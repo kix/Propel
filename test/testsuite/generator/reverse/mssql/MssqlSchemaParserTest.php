@@ -62,6 +62,9 @@ class MssqlSchemaParserTest extends PHPUnit_Framework_TestCase
 
 class TestableMssqlSchemaParser extends MssqlSchemaParser
 {
+  /**
+   * @param string $identifier
+   */
   public function cleanDelimitedIdentifiers($identifier)
   {
     return parent::cleanDelimitedIdentifiers($identifier);

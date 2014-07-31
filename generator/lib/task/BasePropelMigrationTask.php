@@ -86,7 +86,7 @@ abstract class BasePropelMigrationTask extends AbstractPropelTask
     /**
      * Get the output directory.
      *
-     * @return string
+     * @return PhingFile
      */
     public function getOutputDirectory()
     {

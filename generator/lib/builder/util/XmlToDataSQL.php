@@ -248,6 +248,9 @@ class ColumnValue
     private $col;
     private $val;
 
+    /**
+     * @param string $val
+     */
     public function __construct(Column $col, $val)
     {
         $this->col = $col;

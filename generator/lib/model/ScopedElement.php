@@ -49,7 +49,7 @@ abstract class ScopedElement extends XMLElement
     /**
      * retrieves a build property.
      *
-     * @param mixed $name
+     * @param string $name
      */
     abstract protected function getBuildProperty($name);
 
@@ -68,7 +68,7 @@ abstract class ScopedElement extends XMLElement
     /**
      * Get the value of the namespace.
      *
-     * @return value of namespace.
+     * @return string of namespace.
      */
     public function getNamespace()
     {
@@ -95,7 +95,7 @@ abstract class ScopedElement extends XMLElement
     /**
      * Get the value of package.
      *
-     * @return value of package.
+     * @return string of package.
      */
     public function getPackage()
     {
@@ -119,7 +119,7 @@ abstract class ScopedElement extends XMLElement
     /**
      * Get the value of schema.
      *
-     * @return value of schema.
+     * @return string of schema.
      */
     public function getSchema()
     {

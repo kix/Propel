@@ -210,6 +210,9 @@ class ValidatorTest extends BookstoreEmptyTestBase
         $this->assertInstanceOf('ISBNValidator', $validator, "Expected validator that failed to be ISBNValidator");
     }
 
+    /**
+     * @param string $expectedMsg
+     */
     protected function assertSingleValidation($ret, $expectedMsg)
     {
         /* Make sure validation failed */

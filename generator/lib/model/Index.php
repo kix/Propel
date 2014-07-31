@@ -220,7 +220,7 @@ class Index extends XMLElement
      *
      * @param string $name
      *
-     * @return numeric The size or NULL
+     * @return integer|null The size or NULL
      */
     public function getColumnSize($name)
     {
@@ -309,7 +309,7 @@ class Index extends XMLElement
     /**
      * Return the list of local columns. You should not edit this list.
      *
-     * @return array string[]
+     * @return string[] string[]
      */
     public function getColumns()
     {

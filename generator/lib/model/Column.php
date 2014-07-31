@@ -896,7 +896,7 @@ class Column extends XMLElement
     /**
      * Returns the Propel column type as a string.
      *
-     * @return string The constant representing Propel type: e.g. "VARCHAR".
+     * @return integer The constant representing Propel type: e.g. "VARCHAR".
      * @see         Domain::getType()
      */
     public function getType()
@@ -1122,7 +1122,7 @@ class Column extends XMLElement
     /**
      * Returns the scale of the column
      *
-     * @return string
+     * @return integer
      */
     public function getScale()
     {
@@ -1265,6 +1265,7 @@ class Column extends XMLElement
     /**
      * Set the auto increment value.
      * Use isAutoIncrement() to find out if it is set or not.
+     * @param boolean|null $value
      */
     public function setAutoIncrement($value)
     {

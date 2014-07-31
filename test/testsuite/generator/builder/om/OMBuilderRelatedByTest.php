@@ -34,6 +34,9 @@ class OMBuilderRelatedByTest extends PHPUnit_Framework_TestCase
         }
     }
 
+    /**
+     * @return ForeignKey
+     */
     protected function getForeignKey($tableName, $index)
     {
         $fks = self::$database->getTable($tableName)->getForeignKeys();

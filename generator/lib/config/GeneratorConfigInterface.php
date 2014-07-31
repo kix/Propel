@@ -43,17 +43,20 @@ interface GeneratorConfigInterface
      * Sets a specific propel (renamed) property from the build.
      *
      * @param string $name
-     * @param mixed  $value
+     * @param null|string  $value
+     * @return void
      */
     public function setBuildProperty($name, $value);
 
     /**
      * Creates and configures a new Platform class.
+     * @return null|PropelPlatformInterface
      */
     public function getConfiguredPlatform(PDO $con = null, $database = null);
 
     /**
      * Gets a configured behavior class
+     * @return string|false
      */
     public function getConfiguredBehavior($name);
 }

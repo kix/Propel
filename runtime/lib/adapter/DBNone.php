@@ -86,7 +86,7 @@ class DBNone extends DBAdapter
      *
      * @param string $s String to calculate length of.
      *
-     * @return string
+     * @return integer
      */
     public function strLength($s)
     {

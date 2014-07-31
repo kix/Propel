@@ -124,7 +124,7 @@ class PropelDataDumpTask extends AbstractPropelDataModelTask
     /**
      * Get the database url
      *
-     * @return The DatabaseUrl value
+     * @return string DatabaseUrl value
      */
     public function getDatabaseUrl()
     {

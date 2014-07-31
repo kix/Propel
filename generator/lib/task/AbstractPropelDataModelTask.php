@@ -336,7 +336,7 @@ abstract class AbstractPropelDataModelTask extends AbstractPropelTask
     /**
      * Get the output directory.
      *
-     * @return string
+     * @return PhingFile
      */
     public function getOutputDirectory()
     {
@@ -534,7 +534,7 @@ abstract class AbstractPropelDataModelTask extends AbstractPropelTask
      * @param DomDocument $dom
      * @param string      $srcDir
      *
-     * @return void (objects, DomDocument, are references by default in PHP 5, so returning it is useless)
+     * @return integer (objects, DomDocument, are references by default in PHP 5, so returning it is useless)
      **/
     protected function includeExternalSchemas(DomDocument $dom, $srcDir)
     {

@@ -23,6 +23,10 @@ require_once dirname(__FILE__) . '/../../../../runtime/lib/util/BasePeer.php';
 class CriteriaMergeTest extends BookstoreTestBase
 {
 
+    /**
+     * @param Criteria $criteria
+     * @param string $expectedSql
+     */
     protected function assertCriteriaTranslation($criteria, $expectedSql, $message = '')
     {
         $params = array();

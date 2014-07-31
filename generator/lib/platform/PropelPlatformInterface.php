@@ -38,6 +38,7 @@ interface PropelPlatformInterface
      * Sets a database connection to use (for quoting, etc.).
      *
      * @param PDO $con The database connection to use in this Platform class.
+     * @return void
      */
     public function setConnection(PDO $con = null);
 
@@ -52,6 +53,7 @@ interface PropelPlatformInterface
      * Sets the GeneratorConfigInterface which contains any generator build properties.
      *
      * @param GeneratorConfigInterface $config
+     * @return void
      */
     public function setGeneratorConfig(GeneratorConfigInterface $config);
 
@@ -87,13 +89,14 @@ interface PropelPlatformInterface
     public function getDomainForType($propelType);
 
     /**
+     * @param boolean $notNull
      * @return string The RDBMS-specific SQL fragment for <code>NULL</code>
      * or <code>NOT NULL</code>.
      */
     public function getNullString($notNull);
 
     /**
-     * @return The RDBMS-specific SQL fragment for autoincrement.
+     * @return string RDBMS-specific SQL fragment for autoincrement.
      */
     public function getAutoIncrement();
 
@@ -121,7 +124,7 @@ interface PropelPlatformInterface
      * </code>
      *
      * @param      array Column[] or string[]
-     * @param string $delim The delimiter to use in separating the column names.
+     * @param string $delimiter The delimiter to use in separating the column names.
      *
      * @return string
      */
@@ -216,7 +219,7 @@ interface PropelPlatformInterface
      *
      * @param mixed $tf A boolean or string representation of boolean ('y', 'true').
      *
-     * @return mixed
+     * @return string
      */
     public function getBooleanString($tf);
 

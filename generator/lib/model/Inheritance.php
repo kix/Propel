@@ -43,7 +43,7 @@ class Inheritance extends XMLElement
     /**
      * Get the value of key.
      *
-     * @return value of key.
+     * @return string of key.
      */
     public function getKey()
     {

@@ -158,7 +158,7 @@ class GeneratorConfig implements GeneratorConfigInterface
      *
      * @param PDO $con
      *
-     * @return Platform
+     * @return null|PropelPlatformInterface
      * @throws BuildException
      */
     public function getConfiguredPlatform(PDO $con = null, $database = null)
@@ -287,6 +287,9 @@ class GeneratorConfig implements GeneratorConfigInterface
         return $this->buildConnections;
     }
 
+    /**
+     * @param string $xmlString
+     */
     protected function parseBuildConnections($xmlString)
     {
         $conf = simplexml_load_string($xmlString);

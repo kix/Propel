@@ -22,7 +22,7 @@ class OraclePlatformTest extends PlatformTestProvider
     /**
      * Get the Platform object for this class
      *
-     * @return Platform
+     * @return OraclePlatform
      */
     protected function getPlatform()
     {

@@ -77,6 +77,9 @@ class PropelQuickBuilder
         return $this->config;
     }
 
+    /**
+     * @param string $schema
+     */
     public static function buildSchema($schema, $dsn = null, $user = null, $pass = null, $adapter = null)
     {
         $builder = new self;
@@ -141,6 +144,9 @@ class PropelQuickBuilder
         return count($statements);
     }
 
+    /**
+     * @return string
+     */
     public function getSQL()
     {
         return $this->getPlatform()->getAddTablesDDL($this->getDatabase());

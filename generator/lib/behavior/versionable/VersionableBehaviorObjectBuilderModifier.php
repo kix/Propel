@@ -42,6 +42,11 @@ class VersionableBehaviorObjectBuilderModifier
         $this->table = $behavior->getTable();
     }
 
+    /**
+     * @param string $key
+     *
+     * @return string
+     */
     protected function getParameter($key)
     {
         return $this->behavior->getParameter($key);
@@ -155,6 +160,9 @@ class VersionableBehaviorObjectBuilderModifier
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addEnforceVersionAttribute(&$script)
     {
         $script .= "
@@ -191,6 +199,9 @@ protected \$enforceVersion = false;
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addVersionSetter(&$script)
     {
         $script .= "

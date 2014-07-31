@@ -70,7 +70,7 @@ class PropelCSVParser extends PropelParser
      *
      * @param array $row An array of data to be formatted for output to the file
      *
-     * @return array The formatted array
+     * @return string The formatted array
      */
     protected function formatRow($row)
     {
@@ -236,6 +236,7 @@ class PropelCSVParser extends PropelParser
      * Accepts a formatted row of data and returns it raw
      *
      * @param array An array of data from a CSV output
+     * @param string[] $row
      *
      * @return array The cleaned up array
      */
@@ -264,6 +265,9 @@ class PropelCSVParser extends PropelParser
         return preg_match('/^' . $quote . '.*' . $quote . '$/', $input);
     }
 
+    /**
+     * @param string $input
+     */
     protected function unescape($input)
     {
         return str_replace(

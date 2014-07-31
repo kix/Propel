@@ -223,7 +223,7 @@ class Criterion
     /**
      * Get the list of clauses in this Criterion.
      *
-     * @return array
+     * @return Criterion[]
      */
     private function getClauses()
     {
@@ -272,6 +272,7 @@ class Criterion
      *
      * @param string &$sb    The string that will receive the Prepared Statement
      * @param array  $params A list to which Prepared Statement parameters will be appended
+     * @param string $sb
      *
      * @return void
      * @throws PropelException - if the expression builder cannot figure out how to turn a specified
@@ -297,6 +298,7 @@ class Criterion
      *
      * @param string &$sb    The string that will receive the Prepared Statement
      * @param array  $params A list to which Prepared Statement parameters will be appended
+     * @param string $sb
      */
     protected function dispatchPsHandling(&$sb, array &$params)
     {

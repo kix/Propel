@@ -1087,6 +1087,9 @@ class QueryBuilderTest extends BookstoreTestBase
 
 class myCustomBookQuery extends BookQuery
 {
+    /**
+     * @param string $modelAlias
+     */
     public static function create($modelAlias = null, $criteria = null)
     {
         if ($criteria instanceof myCustomBookQuery) {

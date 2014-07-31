@@ -431,6 +431,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
      * Adds variables that store column values.
      *
      * @param string &$script The script will be modified in this method.
+     * @param string $script
      *
      * @see        addColumnNameConstants()
      */
@@ -1549,6 +1550,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
      *
      * @param string &$script The script will be modified in this method.
      * @param Column $col     The current column.
+     * @param string $script
      */
     protected function addMutatorClose(&$script, Column $col)
     {
@@ -3737,6 +3739,9 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
         }
     }
 
+    /**
+     * @param ForeignKey[] $referrers
+     */
     protected function addInitRelations(&$script, $referrers)
     {
         $script .= "
@@ -4101,7 +4106,6 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
     /**
      * @param string     &$script The script will be modified in this method.
      * @param ForeignKey $refFK
-     * @param ForeignKey $crossFK
      */
     protected function addRefFKDoAdd(&$script, $refFK)
     {
@@ -4126,7 +4130,6 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
     /**
      * @param string     &$script The script will be modified in this method.
      * @param ForeignKey $refFK
-     * @param ForeignKey $crossFK
      */
     protected function addRefFKRemove(&$script, $refFK)
     {
@@ -4262,6 +4265,9 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . " ";
 ";
     }
 
+    /**
+     * @param string $fkName
+     */
     protected function addScheduledForDeletionAttribute(&$script, $fkName)
     {
         $fkName = lcfirst($fkName);

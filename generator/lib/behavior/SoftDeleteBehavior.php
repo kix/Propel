@@ -52,6 +52,9 @@ class SoftDeleteBehavior extends Behavior
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     public function addObjectForceDelete(&$script)
     {
         $peerClassName = $this->builder->getPeerClassname();
@@ -142,6 +145,9 @@ protected \$localSoftDelete = true;
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     public function addQueryIncludeDeleted(&$script)
     {
         $script .= "
@@ -307,6 +313,9 @@ EOT;
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     public function addPeerEnableSoftDelete(&$script)
     {
         $script .= "

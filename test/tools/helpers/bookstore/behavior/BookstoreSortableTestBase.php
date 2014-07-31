@@ -162,6 +162,9 @@ abstract class BookstoreSortableTestBase extends BookstoreTestBase
         return $ret;
     }
 
+    /**
+     * @param integer $scope
+     */
     protected function getFixturesArrayWithScope($scope = null)
     {
         $c = new Criteria();

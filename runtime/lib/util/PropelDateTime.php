@@ -103,7 +103,7 @@ class PropelDateTime extends DateTime
      * Sets an internal property with the date string and returns properties
      * of class that should be serialized.
      *
-     * @return array string[]
+     * @return string[] string[]
      */
     public function __sleep()
     {

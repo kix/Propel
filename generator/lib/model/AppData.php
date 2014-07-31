@@ -83,7 +83,7 @@ class AppData
     /**
      * Gets the platform object to use for any databases added to this application model.
      *
-     * @return PropelPlatformInterface
+     * @return string
      */
     public function getPlatform()
     {

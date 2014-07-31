@@ -31,7 +31,7 @@ class TypeValidator implements BasicValidator
      * @param ValidatorMap $map
      * @param mixed        $value
      *
-     * @return boolean
+     * @return boolean|null
      *
      * @throws PropelException
      */

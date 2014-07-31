@@ -15,6 +15,9 @@
  */
 class CmsDataPopulator
 {
+    /**
+     * @param PDO $con
+     */
     public static function populate($con = null)
     {
       if ($con === null) {
@@ -127,6 +130,9 @@ class CmsDataPopulator
         $con->commit();
     }
 
+    /**
+     * @param PDO $con
+     */
     public static function depopulate($con = null)
     {
         if ($con === null) {

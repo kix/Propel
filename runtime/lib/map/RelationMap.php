@@ -70,6 +70,9 @@ class RelationMap
         return $this->name;
     }
 
+    /**
+     * @param string $pluralName
+     */
     public function setPluralName($pluralName)
     {
         $this->pluralName = $pluralName;
@@ -227,7 +230,7 @@ class RelationMap
     /**
      * Get the local columns
      *
-     * @return Array list of ColumnMap objects
+     * @return ColumnMap[] list of ColumnMap objects
      */
     public function getLocalColumns()
     {
@@ -237,7 +240,7 @@ class RelationMap
     /**
      * Get the foreign columns
      *
-     * @return Array list of ColumnMap objects
+     * @return ColumnMap[] list of ColumnMap objects
      */
     public function getForeignColumns()
     {
@@ -277,7 +280,7 @@ class RelationMap
     /**
      * Get the onUpdate behavior
      *
-     * @return integer the relation type
+     * @return string the relation type
      */
     public function getOnUpdate()
     {
@@ -297,7 +300,7 @@ class RelationMap
     /**
      * Get the onDelete behavior
      *
-     * @return integer the relation type
+     * @return string the relation type
      */
     public function getOnDelete()
     {

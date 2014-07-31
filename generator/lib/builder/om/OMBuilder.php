@@ -86,6 +86,8 @@ abstract class OMBuilder extends DataModelBuilder
      * Creates a $obj = new Book(); code snippet. Can be used by frameworks, for instance, to
      * extend this behavior, e.g. initialize the object after creating the instance or so.
      *
+     * @param string $objName
+     * @param string $clsName
      * @return string Some code
      */
     public function buildObjectInstanceCreationCode($objName, $clsName)
@@ -231,6 +233,9 @@ abstract class OMBuilder extends DataModelBuilder
         }
     }
 
+    /**
+     * @param string $namespace
+     */
     public function getDeclaredClasses($namespace = null)
     {
         if (null !== $namespace && isset($this->declaredClasses[$namespace])) {
@@ -250,6 +255,9 @@ abstract class OMBuilder extends DataModelBuilder
         }
     }
 
+    /**
+     * @param string $ignoredNamespace
+     */
     public function getUseStatements($ignoredNamespace = null)
     {
         $script = '';
@@ -588,6 +596,7 @@ abstract class OMBuilder extends DataModelBuilder
 
     /**
      * Most of the code comes from the PHP-CS-Fixer project
+     * @param string $content
      */
     private function clean($content)
     {

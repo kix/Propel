@@ -17,8 +17,14 @@ require_once dirname(__FILE__) . '/../../../../generator/lib/builder/util/XmlToA
 abstract class PlatformTestBase extends PHPUnit_Framework_TestCase
 {
 
+    /**
+     * @return null|PropelPlatformInterface
+     */
     abstract protected function getPlatform();
 
+    /**
+     * @return Database
+     */
     protected function getDatabaseFromSchema($schema)
     {
         $xtad = new XmlToAppData($this->getPlatform());
@@ -27,6 +33,9 @@ abstract class PlatformTestBase extends PHPUnit_Framework_TestCase
         return $appData->getDatabase();
     }
 
+    /**
+     * @return Table
+     */
     protected function getTableFromSchema($schema, $tableName = 'foo')
     {
         return $this->getDatabaseFromSchema($schema)->getTable($tableName);

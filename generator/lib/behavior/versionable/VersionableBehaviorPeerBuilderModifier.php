@@ -36,6 +36,9 @@ static \$isVersioningEnabled = true;
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     public function addIsVersioningEnabled(&$script)
     {
         $script .= "

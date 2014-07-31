@@ -35,6 +35,9 @@ class ValidatorMap
     /** related column */
     private $column;
 
+    /**
+     * @param ColumnMap $containingColumn
+     */
     public function __construct($containingColumn)
     {
         $this->column = $containingColumn;
@@ -50,21 +53,33 @@ class ValidatorMap
         return $this->column->getColumnName();
     }
 
+    /**
+     * @param string $name
+     */
     public function setName($name)
     {
         $this->name = $name;
     }
 
+    /**
+     * @param string $classname
+     */
     public function setClass($classname)
     {
         $this->classname = $classname;
     }
 
+    /**
+     * @param string $value
+     */
     public function setValue($value)
     {
         $this->value = $value;
     }
 
+    /**
+     * @param string $message
+     */
     public function setMessage($message)
     {
         $this->message = $message;

@@ -53,6 +53,9 @@ class TestAllHooksTableModifier
 {
   protected $behavior, $table;
 
+  /**
+   * @param TestAllHooksBehavior $behavior
+   */
   public function __construct($behavior)
   {
     $this->behavior = $behavior;

@@ -173,7 +173,7 @@ class Domain extends XMLElement
     }
 
     /**
-     * @return string Returns the scale.
+     * @return integer Returns the scale.
      */
     public function getScale()
     {
@@ -229,7 +229,7 @@ class Domain extends XMLElement
     }
 
     /**
-     * @return string Returns the propelType.
+     * @return integer Returns the propelType.
      */
     public function getType()
     {

@@ -50,6 +50,9 @@ class PropelModelPager implements IteratorAggregate, Countable
         return $this->query;
     }
 
+    /**
+     * @param PropelPDO $con
+     */
     public function init($con = null)
     {
         $this->con = $con;

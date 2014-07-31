@@ -19,6 +19,10 @@ require_once dirname(__FILE__) . '/../../../tools/helpers/bookstore/BookstoreEmp
  */
 class PropelObjectFormatterWithTest extends BookstoreEmptyTestBase
 {
+    /**
+     * @param ModelCriteria $c
+     * @param string $msg
+     */
     protected function assertCorrectHydration1($c, $msg)
     {
         $con = Propel::getConnection(BookPeer::DATABASE_NAME);

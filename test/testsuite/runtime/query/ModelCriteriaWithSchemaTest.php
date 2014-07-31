@@ -50,6 +50,9 @@ class ModelCriteriaWithSchemaTest extends SchemasTestBase
         $this->doTestReplaceNames($c, ContestBookstoreContestPeer::getTableMap(),  $origClause, $columnPhpName = false, $modifiedClause);
     }
 
+    /**
+     * @param TestableModelCriteriaWithSchema $c
+     */
     public function doTestReplaceNames($c, $tableMap, $origClause, $columnPhpName = false, $modifiedClause)
     {
         $c->replaceNames($origClause);

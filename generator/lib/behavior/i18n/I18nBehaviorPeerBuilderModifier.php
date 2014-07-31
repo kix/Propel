@@ -20,6 +20,9 @@ class I18nBehaviorPeerBuilderModifier
 {
     protected $behavior;
 
+    /**
+     * @param I18nBehavior $behavior
+     */
     public function __construct($behavior)
     {
         $this->behavior = $behavior;

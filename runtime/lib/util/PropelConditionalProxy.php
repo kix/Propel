@@ -39,6 +39,9 @@ class PropelConditionalProxy
     protected $wasTrue;
     protected $parentState;
 
+    /**
+     * @param PropelConditionalProxy $proxy
+     */
     public function __construct($criteria, $cond, $proxy = null)
     {
         $this->criteria = $criteria;

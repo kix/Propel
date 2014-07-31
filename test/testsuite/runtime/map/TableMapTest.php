@@ -278,16 +278,25 @@ class TableMapTest extends PHPUnit_Framework_TestCase
 
 class TestableTableMap extends TableMap
 {
+  /**
+   * @param string $data
+   */
   public function hasPrefix($data)
   {
     return parent::hasPrefix($data);
   }
 
+  /**
+   * @param string $data
+   */
   public function removePrefix($data)
   {
     return parent::removePrefix($data);
   }
 
+  /**
+   * @param string $name
+   */
   public function normalizeColName($name)
   {
     return parent::normalizeColName($name);

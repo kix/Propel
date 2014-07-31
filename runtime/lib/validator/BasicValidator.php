@@ -27,7 +27,7 @@ interface BasicValidator
      * @param ValidatorMap $map A column map object for the column to be validated.
      * @param string       $str a <code>String</code> to be tested
      *
-     * @return mixed TRUE if valid, error message otherwise
+     * @return boolean|null TRUE if valid, error message otherwise
      */
     public function isValid(ValidatorMap $map, $str);
 }

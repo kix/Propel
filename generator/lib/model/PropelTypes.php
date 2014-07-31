@@ -247,6 +247,7 @@ class PropelTypes
     /**
      * Returns the PDO type (PDO::PARAM_* constant) value.
      *
+     * @param integer $type
      * @return int
      */
     public static function getPDOType($type)
