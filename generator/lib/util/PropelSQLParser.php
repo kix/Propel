@@ -151,7 +151,6 @@ class PropelSQLParser
      * // )
      * </code>
      *
-     * @param string $input The absolute path to the file to parse
      *
      * @return array A list of SQL statement strings
      */

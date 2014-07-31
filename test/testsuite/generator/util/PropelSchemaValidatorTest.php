@@ -21,6 +21,9 @@ class SchemaValidatorTest extends PHPUnit_Framework_TestCase
 
     private $xsdFile = 'generator/resources/xsd/database.xsd';
 
+    /**
+     * @param Table $table
+     */
     protected function getAppDataForTable($table)
     {
         $database = new Database();

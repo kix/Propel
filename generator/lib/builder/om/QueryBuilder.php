@@ -759,6 +759,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the filterByCol method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param Column $col
      */
     protected function addFilterByCol(&$script, $col)
     {
@@ -954,6 +955,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the singular filterByCol method for an Array column.
      *
      * @param string &$script The script will be modified in this method.
+     * @param Column $col
      */
     protected function addFilterByArrayCol(&$script, $col)
     {
@@ -1000,6 +1002,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the filterByFk method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param ForeignKey $fk
      */
     protected function addFilterByFk(&$script, $fk)
     {
@@ -1072,6 +1075,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the filterByRefFk method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param ForeignKey $fk
      */
     protected function addFilterByRefFk(&$script, $fk)
     {
@@ -1132,6 +1136,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the joinFk method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param ForeignKey $fk
      */
     protected function addJoinFk(&$script, $fk)
     {
@@ -1147,6 +1152,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the joinRefFk method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param ForeignKey $fk
      */
     protected function addJoinRefFk(&$script, $fk)
     {
@@ -1162,6 +1168,10 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds a joinRelated method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param Table|null $fkTable
+     * @param string $queryClass
+     * @param string $relationName
+     * @param string $joinType
      */
     protected function addJoinRelated(&$script, $fkTable, $queryClass, $relationName, $joinType)
     {
@@ -1204,6 +1214,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the useFkQuery method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param ForeignKey $fk
      */
     protected function addUseFkQuery(&$script, $fk)
     {
@@ -1223,6 +1234,7 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds the useFkQuery method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param ForeignKey $fk
      */
     protected function addUseRefFkQuery(&$script, $fk)
     {
@@ -1242,6 +1254,10 @@ abstract class " . $this->getClassname() . " extends " . $parentClass . "
      * Adds a useRelatedQuery method for this object.
      *
      * @param string &$script The script will be modified in this method.
+     * @param Table|null $fkTable
+     * @param string $queryClass
+     * @param string $relationName
+     * @param string $joinType
      */
     protected function addUseRelatedQuery(&$script, $fkTable, $queryClass, $relationName, $joinType)
     {

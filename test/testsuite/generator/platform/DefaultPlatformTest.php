@@ -24,7 +24,7 @@ class DefaultPlatformTest extends PHPUnit_Framework_TestCase
     /**
      * Get the Platform object for this class
      *
-     * @return Platform
+     * @return DefaultPlatform
      */
     protected function getPlatform()
     {
@@ -64,6 +64,10 @@ class DefaultPlatformTest extends PHPUnit_Framework_TestCase
         return $column;
     }
 
+    /**
+     * @param string[] $defaultValues
+     * @param string $defaultValue
+     */
     public function createEnumColumn($defaultValues, $defaultValue)
     {
         $column = new Column();

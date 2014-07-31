@@ -637,10 +637,10 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Macro to a constraint name.
      *
-     * @param     nameType constraint type
+     * @param     nameType string type
      * @param     nbr unique number for this constraint type
      *
-     * @return unique          name for constraint
+     * @return string          name for constraint
      * @throws EngineException
      */
     private function acquireConstraintName($nameType, $nbr)
@@ -657,7 +657,7 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Gets the value of base class for classes produced from this table.
      *
-     * @return The base class for classes produced from this table.
+     * @return string base class for classes produced from this table.
      */
     public function getBaseClass()
     {
@@ -683,7 +683,7 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Get the value of basePeer.
      *
-     * @return value of basePeer.
+     * @return string of basePeer.
      */
     public function getBasePeer()
     {
@@ -710,7 +710,7 @@ class Table extends ScopedElement implements IDMethod
      * A utility function to create a new column from attrib and add it to this
      * table.
      *
-     * @param Column|string $coldata xml attributes or Column class for the column to add
+     * @param Column|string $data xml attributes or Column class for the column to add
      *
      * @return Column          the added column
      * @throws EngineException
@@ -995,6 +995,7 @@ class Table extends ScopedElement implements IDMethod
 
     /**
      * Set whether this table contains a foreign PK
+     * @param boolean $b
      */
     public function setContainsForeignPK($b)
     {
@@ -1032,6 +1033,7 @@ class Table extends ScopedElement implements IDMethod
     /**
      * A utility function to create a new id method parameter
      * from attrib or object and add it to this table.
+     * @param IdMethodParameter $impdata
      */
     public function addIdMethodParameter($impdata)
     {
@@ -1315,6 +1317,9 @@ class Table extends ScopedElement implements IDMethod
         $this->phpName = $phpName;
     }
 
+    /**
+     * @param string $name
+     */
     public function buildPhpName($name)
     {
         return NameFactory::generateName(NameFactory::PHP_GENERATOR, array($name, $this->phpNamingMethod));
@@ -1348,6 +1353,7 @@ class Table extends ScopedElement implements IDMethod
 
     /**
      * Set the common name of the table (without schema)
+     * @param string $v
      */
     public function setCommonName($v)
     {
@@ -1430,7 +1436,7 @@ class Table extends ScopedElement implements IDMethod
      * Is table read-only, in which case only accessors (and relationship setters)
      * will be created.
      *
-     * @return boolan Value of readOnly.
+     * @return boolean Value of readOnly.
      */
     public function isReadOnly()
     {
@@ -1628,7 +1634,7 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Returns an Array containing all the FKs in the table
      *
-     * @return array Index[]
+     * @return Index[] Index[]
      */
     public function getIndices()
     {
@@ -1638,7 +1644,7 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Returns an Array containing all the UKs in the table
      *
-     * @return array Unique[]
+     * @return Unique[] Unique[]
      */
     public function getUnices()
     {
@@ -1722,7 +1728,6 @@ class Table extends ScopedElement implements IDMethod
      * Return the foreign keys that includes col in it's list of local columns.
      * Eg. Foreign key (a,b,c) references tbl(x,y,z) will be returned of col is either a,b or c.
      *
-     * @param string $col
      *
      * @return array ForeignKey[] or null if there is no FK for specified column.
      */
@@ -2014,7 +2019,7 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Returns all parts of the primary key, separated by commas.
      *
-     * @return A CSV list of primary key parts.
+     * @return string CSV list of primary key parts.
      * @deprecated Use the Platform::getColumnListDDL() with the #getPrimaryKey() method.
      */
     public function printPrimaryKey()
@@ -2045,9 +2050,9 @@ class Table extends ScopedElement implements IDMethod
     /**
      * Returns the elements of the list, separated by commas.
      *
-     * @param array $list
+     * @param Column[] $list
      *
-     * @return A CSV list.
+     * @return string CSV list.
      * @deprecated Use the Platform::getColumnListDDL() method.
      */
     private function printList($list)

@@ -301,7 +301,7 @@ class PropelPager implements Countable, Iterator
      * For now I can only think of returning 1 always.
      * It should probably return 0 if there are no pages
      *
-     * @return int 1
+     * @return string 1
      */
     public function getFirstPage()
     {

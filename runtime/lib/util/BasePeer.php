@@ -72,6 +72,9 @@ class BasePeer
      */
     const TYPE_NUM = 'num';
 
+    /**
+     * @param string $classname
+     */
     public static function getFieldnames($classname, $type = self::TYPE_PHPNAME)
     {
         // TODO we should take care of including the peer class here
@@ -82,6 +85,9 @@ class BasePeer
         return call_user_func($callable, $type);
     }
 
+    /**
+     * @param string $classname
+     */
     public static function translateFieldname($classname, $fieldname, $fromType, $toType)
     {
         // TODO we should take care of including the peer class here
@@ -213,7 +219,7 @@ class BasePeer
      * @param Criteria  $criteria Object containing values to insert.
      * @param PropelPDO $con      A PropelPDO connection.
      *
-     * @return mixed The primary key for the new row if (and only if!) the primary key
+     * @return string|null The primary key for the new row if (and only if!) the primary key
      *                   is auto-generated.  Otherwise will return <code>null</code>.
      * @throws PropelException
      */

@@ -284,6 +284,7 @@ class ColumnMap
      * Set if this column may be null.
      *
      * @param      boolean nn True if column may be null.
+     * @param boolean $nn
      *
      * @return void
      */
@@ -305,7 +306,7 @@ class ColumnMap
     /**
      * Sets the default value for this column.
      *
-     * @param mixed $defaultValue the default value for the column
+     * @param string|null $defaultValue the default value for the column
      *
      * @return void
      */
@@ -329,6 +330,8 @@ class ColumnMap
      *
      * @param      string tableName The name of the table that is foreign.
      * @param      string columnName The name of the column that is foreign.
+     * @param string $tableName
+     * @param string $columnName
      *
      * @return void
      */
@@ -432,6 +435,9 @@ class ColumnMap
         return $this->getRelatedTable()->getColumn($this->relatedColumnName);
     }
 
+    /**
+     * @param ValidatorMap $validator
+     */
     public function addValidator($validator)
     {
         $this->validators[] = $validator;

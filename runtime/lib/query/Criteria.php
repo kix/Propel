@@ -458,7 +458,7 @@ class Criteria implements IteratorAggregate
      *  => array('book.price', 'book.title', 'author.first_name')
      * </code>
      *
-     * @return array
+     * @return integer[]
      */
     public function keys()
     {
@@ -605,7 +605,7 @@ class Criteria implements IteratorAggregate
      *     )
      * </code>
      *
-     * @return array array(table => array(table.column1, table.column2))
+     * @return Criteria array(table => array(table.column1, table.column2))
      */
     public function getTablesColumns()
     {
@@ -825,7 +825,7 @@ class Criteria implements IteratorAggregate
      *
      * @param string $name       name to combine the criterion later
      * @param string $p1         The column to run the comparison on, or Criterion object.
-     * @param mixed  $value
+     * @param null|string  $value
      * @param string $comparison A String.
      *
      * @return Criteria A modified Criteria object.
@@ -1686,7 +1686,7 @@ class Criteria implements IteratorAggregate
      * </code>
      *
      * @param mixed $p1         A Criterion, or a SQL clause with a question mark placeholder, or a column name
-     * @param mixed $value      The value to bind in the condition
+     * @param string $value      The value to bind in the condition
      * @param mixed $comparison A Criteria class constant, or a PDO::PARAM_ class constant
      *
      * @return Criteria Modified Criteria object (for fluent API)
@@ -1886,7 +1886,7 @@ class Criteria implements IteratorAggregate
      *
      * @param bool $cond ignored
      *
-     * @return PropelConditionalProxy|Criteria
+     * @return PropelConditionalProxy
      *
      * @throws PropelException
      */
@@ -1903,7 +1903,7 @@ class Criteria implements IteratorAggregate
      * Returns a PropelConditionalProxy instance.
      * Allows for conditional statements in a fluid interface.
      *
-     * @return PropelConditionalProxy|Criteria
+     * @return PropelConditionalProxy
      *
      * @throws PropelException
      */

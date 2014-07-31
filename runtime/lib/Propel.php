@@ -294,6 +294,7 @@ class Propel
      * Configure Propel a PHP (array) config file.
      *
      * @param      string Path (absolute or relative to include_path) to config file.
+     * @param string $configFile
      *
      * @throws PropelException If configuration file cannot be opened.
      *                             (E_WARNING probably will also be raised by PHP)
@@ -851,8 +852,8 @@ class Propel
      * classname of a validator in the schema.xml.  This method will attempt to include that
      * class via autoload and then relative to a location on the include_path.
      *
-     * @param string $class dot-path to clas (e.g. path.to.my.ClassName).
      *
+     * @param string $path
      * @return string unqualified classname
      *
      * @throws PropelException

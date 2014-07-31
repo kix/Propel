@@ -196,6 +196,7 @@ class ForeignKey extends XMLElement
 
     /**
      * Sets the name attribute.
+     * @param string $name
      */
     public function setName($name)
     {
@@ -255,7 +256,7 @@ class ForeignKey extends XMLElement
     /**
      * Sets a defaultJoin to use for this foreign key.
      *
-     * @param string $name
+     * @param string $defaultJoin
      */
     public function setDefaultJoin($defaultJoin)
     {
@@ -403,7 +404,7 @@ class ForeignKey extends XMLElement
     /**
      * Return an array of local column names.
      *
-     * @return array string[]
+     * @return Column[] string[]
      */
     public function getLocalColumns()
     {
@@ -429,7 +430,7 @@ class ForeignKey extends XMLElement
     /**
      * Return a local column name.
      *
-     * @return string
+     * @return Column
      */
     public function getLocalColumnName($index = 0)
     {
@@ -526,7 +527,7 @@ class ForeignKey extends XMLElement
     /**
      * Return an array of foreign column names.
      *
-     * @return array string[]
+     * @return Column[] string[]
      */
     public function getForeignColumns()
     {
@@ -552,7 +553,7 @@ class ForeignKey extends XMLElement
     /**
      * Return a foreign column name.
      *
-     * @return string
+     * @return Column
      */
     public function getForeignColumnName($index = 0)
     {
@@ -720,7 +721,6 @@ class ForeignKey extends XMLElement
      * by foreign keys on both tables.  I don't know if that's good practice ... but hell, why not
      * support it.
      *
-     * @param ForeignKey $fk
      *
      * @return boolean
      * @link       http://propel.phpdb.org/trac/ticket/549

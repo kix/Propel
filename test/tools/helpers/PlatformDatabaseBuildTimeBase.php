@@ -91,6 +91,9 @@ class PlatformDatabaseBuildTimeBase extends PHPUnit_Framework_TestCase
  */
 class PlatformDatabaseBuildTimeBaseTask extends PropelConvertConfTask
 {
+    /**
+     * @param SimpleXMLElement $xml
+     */
     public static function simpleXmlToArray($xml)
     {
         return parent::simpleXmlToArray($xml);

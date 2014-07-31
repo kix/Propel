@@ -234,7 +234,6 @@ abstract class BaseObject
     /**
      * Code to be run after object hydration
      *
-     * @param PropelPDO $con
      */
     public function postHydrate($row, $startcol = 0, $rehydrate = false)
     {
@@ -266,7 +265,7 @@ abstract class BaseObject
      *
      * @param      obj The object to compare to.
      *
-     * @return Whether equal to the object specified.
+     * @return boolean equal to the object specified.
      */
     public function equals($obj)
     {
@@ -302,7 +301,6 @@ abstract class BaseObject
     /**
      * Get the associative array of the virtual columns in this object
      *
-     * @param string $name The virtual column name
      *
      * @return array
      */
@@ -372,7 +370,7 @@ abstract class BaseObject
      * $book->importFrom('JSON', '{"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}');
      * </code>
      *
-     * @param mixed $parser A PropelParser instance,
+     * @param string $parser A PropelParser instance,
      *                       or a format name ('XML', 'YAML', 'JSON', 'CSV')
      * @param string $data The source data to import from
      *
@@ -395,7 +393,7 @@ abstract class BaseObject
      *  => {"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}');
      * </code>
      *
-     * @param mixed   $parser                 A PropelParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')
+     * @param string   $parser                 A PropelParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')
      * @param boolean $includeLazyLoadColumns (optional) Whether to include lazy load(ed) columns. Defaults to TRUE.
      *
      * @return string The exported data

@@ -127,7 +127,7 @@ abstract class XMLElement
     /**
      * Sets an associated VendorInfo object.
      *
-     * @param mixed $data VendorInfo object or XML attrib data (array)
+     * @param VendorInfo $data VendorInfo object or XML attrib data (array)
      *
      * @return VendorInfo
      */
@@ -149,6 +149,7 @@ abstract class XMLElement
     /**
      * Gets the any associated VendorInfo object.
      *
+     * @param string $type
      * @return VendorInfo
      */
     public function getVendorInfoForType($type)

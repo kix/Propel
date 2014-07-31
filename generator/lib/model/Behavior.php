@@ -179,6 +179,9 @@ class Behavior extends XMLElement
     {
     }
 
+    /**
+     * @param boolean $bool
+     */
     public function setTableModified($bool)
     {
         $this->isTableModified = $bool;
@@ -242,7 +245,7 @@ class Behavior extends XMLElement
      *
      * @param string $param Name of the parameter storing the column name
      *
-     * @return ColumnMap The column of the table supporting the behavior
+     * @return Column|null The column of the table supporting the behavior
      */
     public function getColumnForParameter($param)
     {

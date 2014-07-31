@@ -143,6 +143,7 @@ class Database extends ScopedElement
 
     /**
      * Set the name of the Database
+     * @param string $name
      */
     public function setName($name)
     {
@@ -555,7 +556,7 @@ class Database extends ScopedElement
     /**
      * Get the database behaviors
      *
-     * @return Array of Behavior objects
+     * @return Behavior[] of Behavior objects
      */
     public function getBehaviors()
     {

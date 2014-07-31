@@ -96,7 +96,7 @@ class NameFactoryTest extends BaseTestCase
      * names, etc.
      *
      * @param  int $len the number of characters to include in the string
-     * @return a   string of length <code>len</code> with every character an 'A'
+     * @return string   string of length <code>len</code> with every character an 'A'
      */
     private static function makeString($len)
     {

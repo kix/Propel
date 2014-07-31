@@ -258,7 +258,7 @@ class PropelCollection extends ArrayObject implements Serializable
     /**
      * Prepend one or more elements to the beginning of the collection
      *
-     * @param mixed $value the element to prepend
+     * @param string $value the element to prepend
      *
      * @return integer The number of new elements in the array
      */
@@ -277,8 +277,8 @@ class PropelCollection extends ArrayObject implements Serializable
      * Add an element to the collection with the given key
      * Alias for ArrayObject::offsetSet()
      *
-     * @param mixed $key
-     * @param mixed $value
+     * @param integer|null $key
+     * @param string $value
      */
     public function set($key, $value)
     {
@@ -289,7 +289,7 @@ class PropelCollection extends ArrayObject implements Serializable
      * Removes a specified collection element
      * Alias for ArrayObject::offsetUnset()
      *
-     * @param mixed $key
+     * @param integer $key
      *
      * @return mixed The removed element
      *
@@ -502,7 +502,7 @@ class PropelCollection extends ArrayObject implements Serializable
      * $coll->importFrom('JSON', '{{"Id":9012,"Title":"Don Juan","ISBN":"0140422161","Price":12.99,"PublisherId":1234,"AuthorId":5678}}');
      * </code>
      *
-     * @param mixed  $parser A PropelParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')
+     * @param string  $parser A PropelParser instance, or a format name ('XML', 'YAML', 'JSON', 'CSV')
      * @param string $data   The source data to import from
      *
      * @return BaseObject The current object, for fluid interface

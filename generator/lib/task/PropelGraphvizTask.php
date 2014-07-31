@@ -105,6 +105,7 @@ class PropelGraphvizTask extends AbstractPropelDataModelTask
 
     /**
      * probably insecure
+     * @param string $dotSyntax
      */
     public function writeDot($dotSyntax, PhingFile $outputDir, $baseFilename)
     {

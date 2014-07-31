@@ -24,6 +24,11 @@ class VersionableBehaviorQueryBuilderModifier
         $this->table = $behavior->getTable();
     }
 
+    /**
+     * @param string $key
+     *
+     * @return string
+     */
     protected function getParameter($key)
     {
         return $this->behavior->getParameter($key);
@@ -88,6 +93,9 @@ class VersionableBehaviorQueryBuilderModifier
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addFilterByVersion(&$script)
     {
         $script .= "

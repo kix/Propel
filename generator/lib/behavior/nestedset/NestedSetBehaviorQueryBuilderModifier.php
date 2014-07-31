@@ -18,6 +18,9 @@ class NestedSetBehaviorQueryBuilderModifier
 {
     protected $behavior, $table, $builder, $objectClassname, $peerClassname;
 
+    /**
+     * @param NestedSetBehavior $behavior
+     */
     public function __construct($behavior)
     {
         $this->behavior = $behavior;
@@ -71,6 +74,9 @@ class NestedSetBehaviorQueryBuilderModifier
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addTreeRoots(&$script)
     {
         $script .= "

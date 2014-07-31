@@ -22,6 +22,9 @@ define('_LOB_SAMPLE_FILE_PATH', dirname(__FILE__) . '/../../../etc/lob');
 class BookstoreDataPopulator
 {
 
+    /**
+     * @param PDO $con
+     */
     public static function populate($con = null, $loadMoreBooks = false)
     {
         if ($con === null) {
@@ -268,6 +271,9 @@ class BookstoreDataPopulator
         $con->commit();
     }
 
+    /**
+     * @param PDO $con
+     */
     public static function depopulate($con = null)
     {
         $peerClasses = array(

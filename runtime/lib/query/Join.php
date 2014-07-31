@@ -114,7 +114,7 @@ class Join
      * Join condition definition, for several conditions
      *
      * @param array $lefts     The left columns of the join condition
-     * @param array $rights    The right columns of the join condition
+     * @param string|null $rights    The right columns of the join condition
      * @param array $operators The comparison operators of the join condition, default Join::EQUAL
      *
      * @throws PropelException

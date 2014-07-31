@@ -66,6 +66,9 @@ class SortableRelationBehavior extends Behavior
         return "moveRelated{$this->getRelatedClassPluralForm()}ToNullScope";
     }
 
+    /**
+     * @param string $script
+     */
     protected function addObjectMoveRelatedToNullScope(&$script)
     {
         $peerClass = $this->builder->getNewStubPeerBuilder($this->getForeignTable())->getClassname();

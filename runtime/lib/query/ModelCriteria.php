@@ -144,7 +144,7 @@ class ModelCriteria extends Criteria
     /**
      * Returns the TableMap object for this Criteria
      *
-     * @return TableMap
+     * @return DatabaseMap
      */
     public function getTableMap()
     {
@@ -207,7 +207,7 @@ class ModelCriteria extends Criteria
      *
      * @param string $conditionName A name to store the condition for a later combination with combine()
      * @param string $clause        The pseudo SQL clause, e.g. 'AuthorId = ?'
-     * @param mixed  $value         A value for the condition
+     * @param string  $value         A value for the condition
      * @param mixed  $bindingType   A value for the condition
      *
      * @return ModelCriteria The current object, for fluid interface
@@ -230,7 +230,7 @@ class ModelCriteria extends Criteria
      * @see        Criteria::add()
      *
      * @param string $column     A string representing thecolumn phpName, e.g. 'AuthorId'
-     * @param mixed  $value      A value for the condition
+     * @param string|null  $value      A value for the condition
      * @param string $comparison What to use for the column comparison, defaults to Criteria::EQUAL
      *
      * @return ModelCriteria The current object, for fluid interface
@@ -1399,7 +1399,7 @@ class ModelCriteria extends Criteria
      * @see       find()
      *
      * @param string    $column A string representing the column phpName, e.g. 'AuthorId'
-     * @param mixed     $value  A value for the condition
+     * @param string     $value  A value for the condition
      * @param PropelPDO $con    An optional connection object
      *
      * @return mixed the list of results, formatted by the current formatter
@@ -1442,8 +1442,8 @@ class ModelCriteria extends Criteria
      * @see       filterBy()
      * @see       findOne()
      *
-     * @param mixed     $column A string representing thecolumn phpName, e.g. 'AuthorId'
-     * @param mixed     $value  A value for the condition
+     * @param string     $column A string representing thecolumn phpName, e.g. 'AuthorId'
+     * @param string     $value  A value for the condition
      * @param PropelPDO $con    an optional connection object
      *
      * @return mixed the result, formatted by the current formatter
@@ -1514,7 +1514,7 @@ class ModelCriteria extends Criteria
     }
 
     /**
-     * @param $con
+     * @param PDO $con
      * @return PDOStatement
      * @throws PropelException
      */
@@ -1618,7 +1618,7 @@ class ModelCriteria extends Criteria
     }
 
     /**
-     * @param $affectedRows
+     * @param integer $affectedRows
      * @param  PropelPDO $con
      * @return null
      */
@@ -1751,6 +1751,9 @@ class ModelCriteria extends Criteria
         return $this->postUpdate($affectedRows, $con);
     }
 
+    /**
+     * @param integer $affectedRows
+     */
     protected function postUpdate($affectedRows, PropelPDO $con)
     {
     }
@@ -2040,7 +2043,7 @@ class ModelCriteria extends Criteria
      * @param string  $phpName      String representing the column name in a pseudo SQL clause, e.g. 'Book.Title'
      * @param boolean $failSilently
      *
-     * @return array List($columnMap, $realColumnName)
+     * @return string List($columnMap, $realColumnName)
      *
      * @throws PropelException
      */
@@ -2175,7 +2178,7 @@ class ModelCriteria extends Criteria
      * @see        Criteria::add()
      *
      * @param string $column   The colName of column to run the condition on (e.g. BookPeer::ID)
-     * @param mixed  $value
+     * @param string  $value
      * @param string $operator A String, like Criteria::EQUAL.
      *
      * @return ModelCriteria A modified Criteria object.

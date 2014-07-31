@@ -71,7 +71,7 @@ class Validator extends XMLElement
      * - addRule(Rule $rule)
      * - addRule(array $attribs)
      *
-     * @param mixed $data Rule object or XML attribs (array) from <rule/> element.
+     * @param Rule $data Rule object or XML attribs (array) from <rule/> element.
      *
      * @return Rule The added Rule.
      */

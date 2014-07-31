@@ -265,7 +265,7 @@ class PropelConvertConfTask extends AbstractPropelDataModelTask
      *
      * @param      object The simplexml value object.
      *
-     * @return mixed
+     * @return boolean|string
      */
     private static function getConvertedXmlValue($value)
     {

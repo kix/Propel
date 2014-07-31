@@ -232,7 +232,7 @@ abstract class DataSQLBuilder extends DataModelBuilder
     /**
      * Gets a representation of a NULL value suitable for use in a SQL statement.
      *
-     * @return null
+     * @return string
      */
     protected function getNullSql()
     {

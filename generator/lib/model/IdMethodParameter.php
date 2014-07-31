@@ -67,6 +67,7 @@ class IdMethodParameter extends XMLElement
 
     /**
      * Set the parameter value
+     * @param string $value
      */
     public function setValue($value)
     {

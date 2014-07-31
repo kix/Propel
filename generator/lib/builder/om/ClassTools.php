@@ -133,7 +133,7 @@ class ClassTools
     /**
      * Gets a list of PHP reserved words.
      *
-     * @return array string[]
+     * @return string[] string[]
      */
     public static function getPhpReservedWords()
     {

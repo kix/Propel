@@ -529,6 +529,7 @@ abstract class DataModelBuilder
     /**
      * Returns new Query Inheritance builder class for this table.
      *
+     * @param Inheritance $child
      * @return ObjectBuilder
      */
     public function getNewQueryInheritanceBuilder($child)

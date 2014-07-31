@@ -184,6 +184,7 @@ class DefaultPlatform implements PropelPlatformInterface
     }
 
     /**
+     * @param boolean $notNull
      * @return string The RDBMS-specific SQL fragment for <code>NULL</code>
      * or <code>NOT NULL</code>.
      */
@@ -193,7 +194,7 @@ class DefaultPlatform implements PropelPlatformInterface
     }
 
     /**
-     * @return The RDBMS-specific SQL fragment for autoincrement.
+     * @return string RDBMS-specific SQL fragment for autoincrement.
      */
     public function getAutoIncrement()
     {
@@ -401,7 +402,7 @@ DROP TABLE " . $this->quoteIdentifier($table->getName()) . ";
      * </code>
      *
      * @param      array Column[] or string[]
-     * @param string $delim The delimiter to use in separating the column names.
+     * @param string $delimiter The delimiter to use in separating the column names.
      *
      * @return string
      */
@@ -650,6 +651,9 @@ ALTER TABLE %s DROP CONSTRAINT %s;
         return $script;
     }
 
+    /**
+     * @param string $comment
+     */
     public function getCommentLineDDL($comment)
     {
         $pattern = "-- %s
@@ -1158,9 +1162,8 @@ ALTER TABLE %s ADD
      * This function is used to set default column values when building
      * SQL.
      *
-     * @param mixed $tf A boolean or string representation of boolean ('y', 'true').
      *
-     * @return mixed
+     * @return string
      */
     public function getBooleanString($b)
     {
@@ -1169,6 +1172,9 @@ ALTER TABLE %s ADD
         return ($b ? '1' : '0');
     }
 
+    /**
+     * @param string $stringValue
+     */
     public function getPhpArrayString($stringValue)
     {
         $stringValue = trim($stringValue);

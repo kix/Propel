@@ -93,6 +93,9 @@ class MysqlSchemaParserTest extends PHPUnit_Framework_TestCase
 
 class OpenedPropelConvertConfTask extends PropelConvertConfTask
 {
+    /**
+     * @param SimpleXMLElement $xml
+     */
     public static function simpleXmlToArray($xml)
     {
         return parent::simpleXmlToArray($xml);

@@ -20,7 +20,7 @@ class SqlitePlatformTest extends PlatformTestProvider
     /**
      * Get the Platform object for this class
      *
-     * @return Platform
+     * @return SqlitePlatform
      */
     protected function getPlatform()
     {

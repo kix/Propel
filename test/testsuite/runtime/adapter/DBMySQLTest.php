@@ -86,6 +86,9 @@ class DBMySQLTest extends DBAdapterTestAbstract
         $db->initConnection($this->getPdoMock(), $settings);
     }
 
+    /**
+     * @return PDO
+     */
     protected function getPdoMock()
     {
         $con = $this

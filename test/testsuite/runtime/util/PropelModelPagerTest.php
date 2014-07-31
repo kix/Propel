@@ -37,6 +37,9 @@ class PropelModelPagerTest extends BookstoreEmptyTestBase
         $books->save($con);
     }
 
+    /**
+     * @param integer $maxPerPage
+     */
     protected function getPager($maxPerPage, $page = 1)
     {
         $pager = new PropelModelPager(BookQuery::create(), $maxPerPage);

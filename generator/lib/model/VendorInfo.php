@@ -90,7 +90,7 @@ class VendorInfo extends XMLElement
      * Sets parameter value.
      *
      * @param string $name
-     * @param mixed  $value The value for the parameter.
+     * @param string  $value The value for the parameter.
      */
     public function setParameter($name, $value)
     {
@@ -158,7 +158,6 @@ class VendorInfo extends XMLElement
     /**
      * Gets a new merged VendorInfo object.
      *
-     * @param VendorInfo $info
      *
      * @return VendorInfo new object with merged parameters
      */

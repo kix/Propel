@@ -108,6 +108,9 @@ class ModelJoin extends Join
         return null === $this->previousJoin;
     }
 
+    /**
+     * @param string $relationAlias
+     */
     public function setRelationAlias($relationAlias)
     {
         return $this->setRightTableAlias($relationAlias);

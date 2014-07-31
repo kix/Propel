@@ -171,6 +171,9 @@ class DatabaseMap
         return $this->hasTable($name);
     }
 
+    /**
+     * @return TableMap
+     */
     public function getTableByPhpName($phpName)
     {
         if (array_key_exists($phpName, $this->tablesByPhpName)) {

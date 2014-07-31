@@ -43,6 +43,9 @@ class SortableBehaviorPeerBuilderModifier
      */
     protected $peerClassname;
 
+    /**
+     * @param SortableBehavior $behavior
+     */
     public function __construct($behavior)
     {
         $this->behavior = $behavior;
@@ -59,6 +62,9 @@ class SortableBehaviorPeerBuilderModifier
         return strtolower($this->behavior->getColumnForParameter($name)->getName());
     }
 
+    /**
+     * @param string $name
+     */
     protected function getColumnConstant($name)
     {
         return $this->behavior->getColumnForParameter($name)->getName();
@@ -182,6 +188,9 @@ public static function sortableApplyScopeCriteria(Criteria \$criteria, \$scope, 
 
     }
 
+    /**
+     * @param string $script
+     */
     protected function addGetMaxRank(&$script)
     {
         $useScope = $this->behavior->useScope();

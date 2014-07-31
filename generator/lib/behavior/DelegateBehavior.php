@@ -63,6 +63,10 @@ class DelegateBehavior extends Behavior
         }
     }
 
+    /**
+     * @param Table|null $delegateTable
+     * @param Table $mainTable
+     */
     protected function relateDelegateToMainTable($delegateTable, $mainTable)
     {
         $pks = $mainTable->getPrimaryKey();

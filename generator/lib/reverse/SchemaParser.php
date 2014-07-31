@@ -29,6 +29,7 @@ interface SchemaParser
      * Sets the database connection.
      *
      * @param PDO $dbh
+     * @return void
      */
     public function setConnection(PDO $dbh);
 
@@ -36,6 +37,7 @@ interface SchemaParser
      * Sets the GeneratorConfig to use in the parsing.
      *
      * @param GeneratorConfigInterface $config
+     * @return void
      */
     public function setGeneratorConfig(GeneratorConfigInterface $config);
 

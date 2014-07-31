@@ -166,6 +166,7 @@ abstract class " . $this->getClassname() . $extendingPeerClass . "
      * Adds the static map builder registration code.
      *
      * @param string &$script The script will be modified in this method.
+     * @param string $script
      */
     protected function addStaticTableMapRegistration(&$script)
     {
@@ -267,6 +268,7 @@ abstract class " . $this->getClassname() . $extendingPeerClass . "
      * Adds the COLUMN_NAME constants to the class definition.
      *
      * @param string &$script The script will be modified in this method.
+     * @param string $script
      */
     protected function addColumnNameConstants(&$script)
     {
@@ -2218,6 +2220,12 @@ abstract class " . $this->getClassname() . $extendingPeerClass . "
         return $offsets;
     }
 
+    /**
+     * @param ForeignKey $fk
+     * @param Table $table
+     * @param Table|null $joinTable
+     * @param PeerBuilder $joinedTablePeerBuilder
+     */
     public function addCriteriaJoin($fk, $table, $joinTable, $joinedTablePeerBuilder)
     {
         $script = '';

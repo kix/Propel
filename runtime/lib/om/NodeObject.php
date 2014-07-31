@@ -121,7 +121,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Sets the parentNode of the node in the tree
      *
-     * @param Node $parent Propel node object
+     * @param NodeObject $parent Propel node object
      *
      * @return object The current object (for fluent API support)
      */
@@ -130,7 +130,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Sets the previous sibling of the node in the tree
      *
-     * @param Node $node Propel node object
+     * @param NodeObject $node Propel node object
      *
      * @return object The current object (for fluent API support)
      */
@@ -139,7 +139,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Sets the next sibling of the node in the tree
      *
-     * @param Node $node Propel node object
+     * @param NodeObject $node Propel node object
      *
      * @return object The current object (for fluent API support)
      */
@@ -162,7 +162,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Tests if object is equal to $node
      *
-     * @param object $node Propel object for node to compare to
+     * @param NodeObject $node Propel object for node to compare to
      *
      * @return bool
      */
@@ -250,7 +250,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Inserts as first child of destination node $parent
      *
-     * @param object    $parent Propel object for given destination node
+     * @param NodeObject    $parent Propel object for given destination node
      * @param PropelPDO $con    Connection to use.
      *
      * @return object The current object (for fluent API support)
@@ -260,7 +260,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Inserts as last child of destination node $parent
      *
-     * @param object    $parent Propel object for given destination node
+     * @param NodeObject    $parent Propel object for given destination node
      * @param PropelPDO $con    Connection to use.
      *
      * @return object The current object (for fluent API support)
@@ -270,7 +270,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Inserts node as previous sibling to destination node $dest
      *
-     * @param object    $dest Propel object for given destination node
+     * @param NodeObject    $dest Propel object for given destination node
      * @param PropelPDO $con  Connection to use.
      *
      * @return object The current object (for fluent API support)
@@ -280,7 +280,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Inserts node as next sibling to destination node $dest
      *
-     * @param object    $dest Propel object for given destination node
+     * @param NodeObject    $dest Propel object for given destination node
      * @param PropelPDO $con  Connection to use.
      *
      * @return object The current object (for fluent API support)
@@ -290,7 +290,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Moves node to be first child of $parent
      *
-     * @param object    $parent Propel object for destination node
+     * @param NodeObject    $parent Propel object for destination node
      * @param PropelPDO $con    Connection to use.
      *
      * @return void
@@ -300,7 +300,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Moves node to be last child of $parent
      *
-     * @param object    $parent Propel object for destination node
+     * @param NodeObject    $parent Propel object for destination node
      * @param PropelPDO $con    Connection to use.
      *
      * @return void
@@ -310,7 +310,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Moves node to be prev sibling to $dest
      *
-     * @param object    $dest Propel object for destination node
+     * @param NodeObject    $dest Propel object for destination node
      * @param PropelPDO $con  Connection to use.
      *
      * @return void
@@ -320,7 +320,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Moves node to be next sibling to $dest
      *
-     * @param object    $dest Propel object for destination node
+     * @param NodeObject    $dest Propel object for destination node
      * @param PropelPDO $con  Connection to use.
      *
      * @return void
@@ -330,7 +330,7 @@ interface NodeObject extends IteratorAggregate
     /**
      * Inserts node as parent of given node.
      *
-     * @param object    $node Propel object for given destination node
+     * @param NodeObject    $node Propel object for given destination node
      * @param PropelPDO $con  Connection to use.
      *
      * @return void

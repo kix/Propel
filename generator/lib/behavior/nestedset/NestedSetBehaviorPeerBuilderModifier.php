@@ -19,12 +19,18 @@ class NestedSetBehaviorPeerBuilderModifier
 {
     protected $behavior, $table, $builder, $objectClassname, $peerClassname;
 
+    /**
+     * @param NestedSetBehavior $behavior
+     */
     public function __construct($behavior)
     {
         $this->behavior = $behavior;
         $this->table = $behavior->getTable();
     }
 
+    /**
+     * @param string $key
+     */
     protected function getParameter($key)
     {
         return $this->behavior->getParameter($key);
@@ -40,11 +46,17 @@ class NestedSetBehaviorPeerBuilderModifier
         return strtolower($this->getColumn($name)->getName());
     }
 
+    /**
+     * @param string $name
+     */
     protected function getColumnConstant($name)
     {
         return $this->getColumn($name)->getName();
     }
 
+    /**
+     * @param string $name
+     */
     protected function getColumnPhpName($name)
     {
         return $this->getColumn($name)->getPhpName();
@@ -137,6 +149,9 @@ public static function setNegativeScope(\$scope, PropelPDO \$con = null)
 ";
     }
 
+    /**
+     * @param string $script
+     */
     protected function addRetrieveRoots(&$script)
     {
         $peerClassname = $this->peerClassname;

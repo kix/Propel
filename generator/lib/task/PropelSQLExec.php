@@ -79,7 +79,7 @@ class PropelSQLExec extends AbstractPropelTask
     /**
      * Get the sqldbmap properties file.
      *
-     * @return filename for the sqldbmap
+     * @return PhingFile for the sqldbmap
      */
     public function getSqlDbMap()
     {

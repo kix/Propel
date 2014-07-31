@@ -348,6 +348,7 @@ class PgsqlSchemaParser extends BaseSchemaParser
 
     /**
      * Load foreign keys for this table.
+     * @param string $version
      */
     protected function addForeignKeys(Table $table, $oid, $version)
     {
@@ -452,6 +453,7 @@ class PgsqlSchemaParser extends BaseSchemaParser
 
     /**
      * Load indexes for this table
+     * @param string $version
      */
     protected function addIndexes(Table $table, $oid, $version)
     {
@@ -503,6 +505,7 @@ class PgsqlSchemaParser extends BaseSchemaParser
 
     /**
      * Loads the primary key for this table.
+     * @param string $version
      */
     protected function addPrimaryKey(Table $table, $oid, $version)
     {

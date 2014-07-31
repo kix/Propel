@@ -97,6 +97,7 @@ class TableMap
     /**
      * Construct a new TableMap.
      *
+     * @param DatabaseMap $dbMap
      */
     public function __construct($name = null, $dbMap = null)
     {

@@ -142,6 +142,9 @@ if (\$this->isColumnModified($const) && \$this->{$this->getColumnGetter()}()) {
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addSlugSetter(&$script)
     {
         $script .= "
@@ -392,6 +395,9 @@ protected function makeSlugUnique(\$slug, \$separator = '" . $this->getParameter
         return $script;
     }
 
+    /**
+     * @param string $script
+     */
     protected function addFilterBySlug(&$script)
     {
         $script .= "

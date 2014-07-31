@@ -138,11 +138,6 @@ class XmlToAppData
     /**
      * Handles opening elements of the xml file.
      *
-     * @param string $uri
-     * @param string $localName The local name (without prefix), or the empty string if
-     *         Namespace processing is not being performed.
-     * @param string $rawName The qualified name (with prefix), or the empty string if
-     *         qualified names are not available.
      * @param string $attributes The specified or defaulted attributes
      *
      * @throws SchemaException
@@ -399,6 +394,9 @@ class XmlToAppData
         return count($this->schemasTagsStack) > 1;
     }
 
+    /**
+     * @param string|null $filePath
+     */
     protected function isAlreadyParsed($filePath)
     {
         return isset($this->schemasTagsStack[$filePath]);
